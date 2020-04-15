@@ -1,0 +1,35 @@
+{"type": "SHIP_CONFIRM", "order_id": "orduid9875", "delivery_id": "deluid9875", "tracking_number": "987654312", "carrier": "DHL", "fees": "5.32", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:05.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9876", "delivery_id": "deluid9876", "tracking_number": "987654313", "carrier": "DHL", "fees": "8.30", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:06.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9877", "delivery_id": "deluid9877", "tracking_number": "987654314", "carrier": "DHL", "fees": "35.32", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:07.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9878", "delivery_id": "deluid9878", "tracking_number": "987654315", "carrier": "DHL", "fees": "25.32", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:08.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9879", "delivery_id": "deluid9879", "tracking_number": "987654316", "carrier": "DHL", "fees": "52.32", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:09.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9880", "delivery_id": "deluid9880", "tracking_number": "987654317", "carrier": "DHL", "fees": "7.50", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:10.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9881", "delivery_id": "deluid9881", "tracking_number": "987654318", "carrier": "DHL", "fees": "8.60", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:11.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9882", "delivery_id": "deluid9882", "tracking_number": "987654319", "carrier": "DHL", "fees": "9.12", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:12.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9883", "delivery_id": "deluid9883", "tracking_number": "987654320", "carrier": "DHL", "fees": "65.23", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:13.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9884", "delivery_id": "deluid9884", "tracking_number": "987654321", "carrier": "DHL", "fees": "34.50", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:14.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9885", "delivery_id": "deluid9885", "tracking_number": "987654322", "carrier": "DHL", "fees": "4.99", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:15.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9886", "delivery_id": "deluid9886", "tracking_number": "987654323", "carrier": "DHL", "fees": "34.00", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:16.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9887", "delivery_id": "deluid9887", "tracking_number": "987654324", "carrier": "DHL", "fees": "34.45", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:17.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9888", "delivery_id": "deluid9888", "tracking_number": "987654325", "carrier": "DHL", "fees": "44.99", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:18.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9889", "delivery_id": "deluid9889", "tracking_number": "987654326", "carrier": "DHL", "fees": "33.99", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:19.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9890", "delivery_id": "deluid9890", "tracking_number": "987654327", "carrier": "DHL", "fees": "17.00", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:20.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9891", "delivery_id": "deluid9891", "tracking_number": "987654328", "carrier": "DHL", "fees": "34.15", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:21.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9892", "delivery_id": "deluid9892", "tracking_number": "987654329", "carrier": "DHL", "fees": "24.99", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:22.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9893", "delivery_id": "deluid9893", "tracking_number": "987654330", "carrier": "DHL", "fees": "76.60", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:23.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9894", "delivery_id": "deluid9894", "tracking_number": "987654331", "carrier": "DHL", "fees": "54.75", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:24.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9895", "delivery_id": "deluid9895", "tracking_number": "987654332", "carrier": "DHL", "fees": "45.84", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:25.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9896", "delivery_id": "deluid9896", "tracking_number": "987654333", "carrier": "DHL", "fees": "35.87", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:26.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9897", "delivery_id": "deluid9897", "tracking_number": "987654334", "carrier": "DHL", "fees": "43.98", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:27.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9898", "delivery_id": "deluid9898", "tracking_number": "987654335", "carrier": "DHL", "fees": "54.77", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:28.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9899", "delivery_id": "deluid9899", "tracking_number": "987654336", "carrier": "DHL", "fees": "34.33", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:29.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9900", "delivery_id": "deluid9900", "tracking_number": "987654337", "carrier": "DHL", "fees": "98.09", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:30.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9901", "delivery_id": "deluid9901", "tracking_number": "987654338", "carrier": "DHL", "fees": "10.67", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:31.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9902", "delivery_id": "deluid9902", "tracking_number": "987654339", "carrier": "DHL", "fees": "78.99", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:32.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9903", "delivery_id": "deluid9903", "tracking_number": "987654340", "carrier": "DHL", "fees": "27.43", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:33.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9904", "delivery_id": "deluid9904", "tracking_number": "987654341", "carrier": "DHL", "fees": "23.58", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:34.396+01:00"}
+{"type": "SHIP_CONFIRM", "order_id": "orduid9905", "delivery_id": "deluid9905", "tracking_number": "987654342", "carrier": "DHL", "fees": "14.76", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:35.396+01:00"}
+
+
+
+
