@@ -15,6 +15,7 @@ import vulcan.{
 }
 
 object AvroProducer extends IOApp {
+
   def run(args: List[String]): IO[ExitCode] = {
 
     val avroSettings: AvroSettings[IO] =
@@ -35,11 +36,11 @@ object AvroProducer extends IOApp {
     val stream: Stream[IO, ProducerResult[Option[String], ShipConfirm, Unit]] =
       producerStream[IO]
         .using(producerSettings)
-        .flatMap { producer =>
-          Stream.resource(Blocker[IO]).flatMap { blocker =>
+        .flatMap { producer: KafkaProducer[IO, Option[String], ShipConfirm] =>
+          val inner: Stream[IO, ProducerResult[Option[String], ShipConfirm, Unit]] = Stream.resource(Blocker[IO]).flatMap { blocker =>
             fs2.io
               .readInputStream(
-                IO(getClass.getClassLoader.getResourceAsStream("events.txt")),
+                IO(getClass.getClassLoader.getResourceAsStream("ship_confirm.txt")),
                 4096,
                 blocker
               )
@@ -59,6 +60,7 @@ object AvroProducer extends IOApp {
               }
               .through(produce(producerSettings, producer))
           }
+          inner
         }
 
     stream.compile.drain.as(ExitCode.Success)
