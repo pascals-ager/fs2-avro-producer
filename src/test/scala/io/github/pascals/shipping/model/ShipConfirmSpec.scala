@@ -10,11 +10,12 @@ import vulcan.{
 }
 import org.scalatest.funspec.AnyFunSpec
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient
-import io.github.pascals.shipping.model.ShipConfirm._
 import io.circe._
 import io.circe.parser._
 
 final class ShipConfirmSpec extends AnyFunSpec {
+
+  import io.github.pascals.shipping.model.ShipConfirm._
 
   val schemaRegistryClient: MockSchemaRegistryClient =
     new MockSchemaRegistryClient()
@@ -41,10 +42,20 @@ final class ShipConfirmSpec extends AnyFunSpec {
     java.time.OffsetDateTime.parse("2020-03-20T23:44:05.396+01:00")
   )
   val shipConfirmJson: Json = parse(
-    """{"type": "SHIP_CONFIRM", "order_id": "orduid9875", "delivery_id": "deluid9875", "tracking_number": "987654312", "carrier": "DHL", "fees": "5.32", "currency": "euros", "country":"DE", "timestamp":"2020-03-20T23:44:05.396+01:00"}"""
+    """{
+      |  "type": "SHIP_CONFIRM",
+      |  "order_id": "orduid9875",
+      |  "delivery_id": "deluid9875",
+      |  "tracking_number": "987654312",
+      |  "carrier": "DHL",
+      |  "fees": "5.32",
+      |  "currency": "euros",
+      |  "country": "DE",
+      |  "timestamp": "2020-03-20T23:44:05.396+01:00"
+      |}""".stripMargin
   ).getOrElse(Json.Null)
 
-  it("should be able to do roundtrip avro de/serialization") {
+  it("should be able to do avro de/serialization") {
     (for {
       serializer   <- avroSerializer[ShipConfirm].using(avroSettings).forValue
       serialized   <- serializer.serialize("topic", Headers.empty, shipConfirmObj)
@@ -57,7 +68,7 @@ final class ShipConfirmSpec extends AnyFunSpec {
     } yield assert(deserialized == shipConfirmObj)).unsafeRunSync
   }
 
-  it("should be able to do roundtrip json de/serialization") {
+  it("should be able to do json de/serialization") {
     (for {
       serialized <- IO(
         io.circe.Decoder[ShipConfirm].decodeJson(shipConfirmJson)
