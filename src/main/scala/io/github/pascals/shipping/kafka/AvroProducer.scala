@@ -1,13 +1,18 @@
 package io.github.pascals.shipping.kafka
 
-import cats.effect.{Blocker, ConcurrentEffect, ContextShift, ExitCode, IO, IOApp, Timer}
+import cats.effect.{Blocker, ExitCode, IO, IOApp}
 import cats.implicits._
 import fs2.{Stream, text}
 import fs2.kafka._
 import io.circe.parser._
 import io.github.pascals.shipping.model.ShipConfirm
 import io.github.pascals.shipping.model.ShipConfirm._
-import vulcan.{AvroSettings, SchemaRegistryClientSettings, avroDeserializer, avroSerializer}
+import vulcan.{
+  AvroSettings,
+  SchemaRegistryClientSettings,
+  avroDeserializer,
+  avroSerializer
+}
 
 object AvroProducer extends IOApp {
   def run(args: List[String]): IO[ExitCode] = {
@@ -27,22 +32,34 @@ object AvroProducer extends IOApp {
       ProducerSettings[IO, Option[String], ShipConfirm]
         .withBootstrapServers("192.168.99.107:32100")
 
-    val stream: Stream[IO, ProducerResult[Option[String], ShipConfirm, Unit]] = producerStream[IO]
-      .using(producerSettings)
-      .flatMap { producer =>
-        Stream.resource(Blocker[IO]).flatMap { blocker =>
-          fs2.io.readInputStream(IO(getClass.getClassLoader.getResourceAsStream("events.txt")), 4096, blocker)
-            .through(text.utf8Decode)
-            .through(text.lines)
-            .mapAsync(2)(rec => IO(decode[ShipConfirm](rec).toOption))
-            .flattenOption
-            .mapAsync(2) {
-              rec =>
-                IO(ProducerRecords.one(ProducerRecord("pascals-one-rep", None, rec)))
-            }
-            .through(produce(producerSettings, producer))
+    val stream: Stream[IO, ProducerResult[Option[String], ShipConfirm, Unit]] =
+      producerStream[IO]
+        .using(producerSettings)
+        .flatMap { producer =>
+          Stream.resource(Blocker[IO]).flatMap { blocker =>
+            fs2.io
+              .readInputStream(
+                IO(getClass.getClassLoader.getResourceAsStream("events.txt")),
+                4096,
+                blocker
+              )
+              .through(text.utf8Decode)
+              .through(text.lines)
+              .mapAsync(2)(rec => IO(decode[ShipConfirm](rec).toOption))
+              .evalTap {
+                case Some(_) => IO()
+                case None    => IO(println())
+              }
+              .flattenOption
+              .mapAsync(2) { rec =>
+                IO(
+                  ProducerRecords
+                    .one(ProducerRecord("pascals-one-rep", None, rec))
+                )
+              }
+              .through(produce(producerSettings, producer))
+          }
         }
-      }
 
     stream.compile.drain.as(ExitCode.Success)
   }

@@ -20,7 +20,8 @@ lazy val root = (project in file(".")).
       "com.github.fd4s" %% "vulcan-generic" % "1.0.1",
       "io.circe" %% "circe-core" %  "0.13.0",
       "io.circe" %% "circe-generic" %  "0.13.0",
-      "io.circe" %% "circe-parser" %  "0.13.0"
+      "io.circe" %% "circe-parser" %  "0.13.0",
+      "org.scalatest" %% "scalatest" % "3.1.1" % Test
     )
   )
 
